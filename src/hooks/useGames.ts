@@ -1,11 +1,13 @@
 import { useEffect, useState } from 'react';
 import client from '../services/api-client';
 import { CanceledError } from 'axios';
+import { Platform } from '../components/PlatformIconList';
 
 export interface Game {
   id: number;
   name: string;
   background_image: string;
+  parent_platforms: { platform: Platform }[];
 }
 
 interface GamesResponse {
